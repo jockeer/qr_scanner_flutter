@@ -1,5 +1,6 @@
 import 'package:flutter/material.dart';
 import 'package:provider/provider.dart';
+
 import 'package:qr_app/providers/ui_provider.dart';
 
 
@@ -10,11 +11,13 @@ class CustomNavigatorWidget extends StatelessWidget {
 
     final uiProvider = Provider.of<UiProvider>(context);
     
+    
     final currentIndex = uiProvider.selectedMenuOpt;
     return BottomNavigationBar(
       // elevation: 8.0,
       onTap: (int i){
-        uiProvider.selectedMenuOpt = i; 
+        uiProvider.selectedMenuOpt = i;
+        // scanListProvider
       },
       currentIndex: currentIndex,
       items: [

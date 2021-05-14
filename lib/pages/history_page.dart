@@ -1,13 +1,15 @@
 import 'package:flutter/material.dart';
+import 'package:qr_app/widgets/scan_list_widget.dart';
 
 
-class HistoryPage extends StatelessWidget {
+
+class MapasPage extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
-    return Center(
-      child: Text('History Page'),
-    );
+
+
+    return ScanListWidget(tipo: 'geo',);
    
   }
 }

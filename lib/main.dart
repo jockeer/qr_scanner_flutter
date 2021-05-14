@@ -1,5 +1,6 @@
 import 'package:flutter/material.dart';
 import 'package:provider/provider.dart';
+import 'package:qr_app/providers/scan_list_provider.dart';
 import 'package:qr_app/providers/ui_provider.dart';
 import 'package:qr_app/routes/routets.dart';
 
@@ -17,8 +18,10 @@ class MyApp extends StatelessWidget {
     return MultiProvider(
       
       providers: [
-        ChangeNotifierProvider(create: ( context )=> UiProvider(),)
+        ChangeNotifierProvider(create: ( context )=> UiProvider(),),
+        ChangeNotifierProvider(create: ( context )=> ScanListProvider(),),
       ],
+      
       child: MaterialApp(
         debugShowCheckedModeBanner: false,
         title: 'QR Scanner',
